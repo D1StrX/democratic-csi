@@ -355,6 +355,13 @@ helm repo update
 
 ---
 
+Add the `Democratic-CSI` Helm repository
+
+```bash
+helm repo add democratic-csi https://democratic-csi.github.io/charts/
+helm repo update
+```
+
 Install `Democratic-CSI` with your configured values. Helm V3 requires that you `--create-namespace`
 
 ```bash
