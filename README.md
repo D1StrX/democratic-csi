@@ -340,14 +340,10 @@ Copy proper example Values file from the examples:
 [API with SSH](https://github.com/D1StrX/democratic-csi/blob/667354978e497fb4624d52e909609ca278e4bd25/examples/api-with-ssh)
 
 Add the `Democratic-CSI` Helm repository:
+Add the `Democratic-CSI` Helm repository
 
 ```bash
-helm search repo democratic-csi/
-```
-
-Update your Helm repository to get latest charts:
-
-```bash
+helm repo add democratic-csi https://democratic-csi.github.io/charts/
 helm repo update
 ```
 
@@ -355,11 +351,9 @@ helm repo update
 
 ---
 
-Add the `Democratic-CSI` Helm repository
-
+Update your Helm repository to get latest charts:
 ```bash
-helm repo add democratic-csi https://democratic-csi.github.io/charts/
-helm repo update
+helm search repo democratic-csi/
 ```
 
 Install `Democratic-CSI` with your configured values. Helm V3 requires that you `--create-namespace`
@@ -377,6 +371,12 @@ helm upgrade <name> democratic-csi/democratic-csi --values <freenas-*>.yaml --na
 ### Helm V2
 
 ---
+
+Update your Helm repository to get latest charts:
+
+```bash
+helm search democratic-csi/
+```
 
 Install `Democratic-CSI` with your configured values.
 
